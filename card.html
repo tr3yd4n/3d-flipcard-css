@@ -9,14 +9,41 @@
     <style>
         .maincontainer {
             position: relative;
-            background-color: green;
             height: 350px;
             width: 275px;
             border-radius: 5%;
         }
 
+        .thecard {
+            position: absolute;
+            height: 350px;
+            width: 275px;
+            border-radius: 5%;
+            transform-style: preserve-3d;
+            transition: all 0.5 ease;
+        }
+
+        .thecard:hover {
+            transform: rotateY(180deg);
+        }
+
         .thefront {
-            position: relative;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 5%;
+            backface-visibility: hidden;
+            background: red;
+        }
+
+        .theback {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 5%;
+            backface-visibility: hidden;
+            background: blue;
+            transform: rotateY(180deg);
         }
     </style>
 </head>
